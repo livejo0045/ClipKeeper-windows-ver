@@ -7,6 +7,23 @@ from PyQt6.QtCore import(
     Qt, QTimer, QPropertyAnimation, QEasingCurve, QSize, QMineData, pyqtSignal, QThread, QObject)
 from PyQt6.QtGui import(
     QColor, QPalette, QPixmap, QImage, QFont, QFontDatabase, QIcon, QPainter, QBrush, QPen, QLinearGradient, QCursor, QAction )
-)
 import uuid
 
+BG_DARK = "#0F1117"
+BG_CARD = "#161B27"
+BG_HEADER = "#0D1020"
+BORDER_COLOR = "#252D45"
+ACCENT_GREEN = "#4DFFB0"
+ACCENT_BLUE = "#4D9FFF"
+TEXT_PRIMARY = "#E8EAF2"
+TEXT_MUTED = "#5A6380" 
+TEXT_DIMMED = "#3A4260"
+
+clip_colors = [
+    '#4DFFB0", #Mint Green'
+    "#4D9FFF", #sky blue'
+    "#FF6B9D", #pink'
+    "#FFB84D", #orange'
+    "#C084FC", #Purple'
+    "#4DFFE0", #cyan'
+    "#FF8C4D" #light orange'
