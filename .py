@@ -1,5 +1,6 @@
 # ClipKeeper for Windows  A clipboard manager built with PyQt6
 
+from email.mime import text
 import sys
 import random
 from datetime import datetime 
@@ -61,4 +62,25 @@ def __build_ui(self, content, timestamp, color):
 
     # clip data model
     class clipitem:
-        def __init__ 
+        def __init__ (self, content_type: str, text:= image: QImage = none):
+self,id = str(uuid.uuid4)
+self.content-type = content-type #text or image
+self.text = text 
+self,image = image
+self.timestamp =datetime.now()
+self.color = random.choice(clip_colors)
+
+@property
+def display_text(self)
+    if self.content_type == "text":
+        return self.text[:120] .replace() if self.text else "<no text>"
+    
+    @property
+    def time_str (self):
+        return self.timestamp.strftime("%H:%M:%S")
+    
+    # media row 
+    meta = QHBoxLayout()
+    meta.set spacing(5)
+
+    meta_laybel = qlabel (f"{icon_char} {self.clip.time_str}")
