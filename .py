@@ -38,21 +38,27 @@ class clipcard(QFrame):
     copy_requested = pypsignal(str) #signal to request a copy action with the clips content
     delete_requested = pypsignal(str) #signal to request a delete action with the clips 
 
-    def __init__(self,clip_id, content, timestamp, color)
-        super().__init__(parent)
-        self.clip_id = clip_id
-        self.build_ui(content, timestamp, color)
-        self,_apply_styles(color)
-        self._animate_in()
-        
-        def __build_ui(self, content, timestamp, color):
-            self.setfixedhight(75 if self.clip.content else (91)
-                               layout = QHBoxLayout(self)
-                               layou.setcontentmargins(0,0,15,0)
-                                                       layout.setspacing(5)
+def __init__(self, clip_id, content, timestamp, color):
+    super().__init__()
+    self.clip_id = clip_id
+    self.build_ui(content, timestamp, color)
+    self._apply_styles(color)
+    self._animate_in()
+    
+def __build_ui(self, content, timestamp, color):
+    self.setFixedHeight(75 if content else 91)
+    layout = QHBoxLayout(self)
+    layout.setContentsMargins(0, 0, 15, 0)
+    layout.setSpacing(5)
 
-# left color bar
-bar = qframe()
-bar.setfixedwidth(5)
-bar.setsizepolicy(sixeplicy(SizePolicy.policyfixed)
-                  )
+    # left color bar
+    bar = QFrame()
+    bar.setFixedWidth(5)
+    bar.setStyleSheet(
+        f"background: {color}; border-radius: 2px; margin: 8px 12px 8px 0px;"
+    )
+    layout.addWidget(bar)
+
+    # clip data model
+    class clipitem:
+        def __init__ 
