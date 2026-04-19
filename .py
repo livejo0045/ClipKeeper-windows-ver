@@ -81,6 +81,17 @@ def display_text(self)
     
     # media row 
     meta = QHBoxLayout()
-    meta.set spacing(5)
+    meta.setSpacing(5)
+    icon_label = QLabel()
+    medta_label = QLabel(f"{icon_char} {self.clip. time_str}")
+    meta_label.setstyleesheet(f"color: {TEXT_MUTED}; font-size: 11px; background: transparent;") 
 
-    meta_laybel = qlabel (f"{icon_char} {self.clip.time_str}")
+    meta.addwidget(meta_label)
+    meta.addstretch()
+    content.addlayout(meta)
+
+    layout.addlayout(content)
+    layout.addstretch()
+
+    # content area
+    
