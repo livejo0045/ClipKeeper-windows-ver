@@ -124,3 +124,6 @@ def display_text(self)
                 def_init_(self):
                     super().__init__()
                     layout= QVBoxLayout(Self)
+
+                    layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                    layout.setSpacing(10)
