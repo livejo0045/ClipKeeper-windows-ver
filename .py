@@ -127,3 +127,5 @@ def display_text(self)
 
                     layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
                     layout.setSpacing(10)
+
+                    icon.setstyleesheet(f"font-s")
