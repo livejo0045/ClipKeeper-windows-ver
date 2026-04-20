@@ -66,7 +66,7 @@ def __build_ui(self, content, timestamp, color):
 self,id = str(uuid.uuid4)
 self.content-type = content-type #text or image
 self.text = text 
-self,image = image
+self.image = image
 self.timestamp =datetime.now()
 self.color = random.choice(clip_colors)
 
@@ -94,4 +94,33 @@ def display_text(self)
     layout.addstretch()
 
     # content area
-    
+     content = ovboxlayout()
+     content.setspacing(3)
+     content.stecontentsmargins(0,10,0,10)
+
+     if self.clip.content_type == "image" and self.clip.image:
+         pixmap = qpixmap.fromImage(self.clip.image) .scaledToHight( 48, Qt.transfotationMode.smoothtransformaition
+         )
+         img_label =QLabel()
+         image_label.setPixmap(pixmap)
+         img_label.setStyleSheet("border-radius:4px;")
+         content.addWidget(img_label)
+         else:
+            self.text_label =   QLabel(self.clip.preview or"(empty)") 
+            
+            self.text_label.setWordWrap(False)
+
+            Self.text_label.setMaximumWidth(350)
+            fony=QFont("CONSOLAS",11)
+            self.text_label.set.Font(font)
+
+            self.text_label.setStyleSheet(f"color:{TEXT_PRIMARY}; baclground:transparent;")
+
+            content.addWidget(self.text_label)
+
+            # empty state widget
+
+            class EmptyState(QWidget):
+                def_init_(self):
+                    super().__init__()
+                    layout= QVBoxLayout(Self)
